@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THUÊ ACC 99 NĂM - Hệ Thống Cho Thuê Tài Khoản Game Uy Tín</title>
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <link href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)" rel="stylesheet">
+    <style>
+        @import url('[https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap](https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap)');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0b0e14;
+            color: #e2e8f0;
+        }
+        
+        .font-gaming {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .neon-border {
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+        }
+
+        .blindbox-card {
+            background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+            border: 2px solid #8b5cf6;
+            transition: all 0.3s ease;
+        }
+
+        .blindbox-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            20% { transform: rotate(-8deg); }
+            40% { transform: rotate(8deg); }
+            60% { transform: rotate(-8deg); }
+            80% { transform: rotate(8deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .animate-shake {
+            animation: shake 0.6s infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+    <!-- Thông Báo Pháp Lý -->
+    <div class="bg-emerald-950/80 border-b border-emerald-500/30 text-emerald-300 text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        <i class="fa-solid fa-shield-halved mr-1 text-emerald-400"></i>
+        Dịch vụ cung cấp hợp đồng <strong>CHO THUÊ TÀI KHOẢN DÀI HẠN (99 NĂM)</strong>. Tuân thủ đầy đủ quy định pháp luật.
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cyan-500/30">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <div>
+                    <span class="font-gaming font-black text-xl tracking-wider text-white">THUÊ<span class="text-cyan-400">ACC99NĂM</span></span>
+                    <span class="block text-[10px] text-slate-400 font-semibold -mt-1 tracking-widest uppercase">Hệ Thống Cho Thuê Tài Khoản</span>
+                </div>
+            </a>
+
+            <!-- Số Dư & Nạp Tiền -->
+            <div class="flex items-center gap-3">
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-lg px-3 py-1.5 flex items-center gap-2">
+                    <i class="fa-solid fa-wallet text-amber-400 text-sm"></i>
+                    <div>
+                        <span class="text-[10px] text-slate-400 block -mb-1">Ví Dư</span>
+                        <span id="userBalance" class="font-bold text-amber-400 text-sm">0 đ</span>
+                    </div>
+                </div>
+                <button onclick="openModal('depositModal')" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold text-xs sm:text-sm px-3.5 py-2 rounded-lg transition-all shadow-md shadow-emerald-500/20 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <span>Nạp Tiền</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative py-12 px-4 overflow-hidden border-b border-slate-800/80 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                <i class="fa-solid fa-file-contract mr-1"></i> DỊCH VỤ CHO THUÊ THUẬN TIỆN 24/7
+            </span>
+            <h1 class="font-gaming text-3xl sm:text-5xl font-extrabold text-white tracking-wide mb-4">
+                THUÊ ACC VIP GAME <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">THỜI HẠN 99 NĂM</span>
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+                Trải nghiệm dịch vụ thuê tài khoản game dài hạn 99 năm (36.135 ngày). Kho Acc Free Fire, Roblox, Liên Quân, Genshin VIP giá cực tốt. Nhận tài khoản tự động ngay sau 10 giây!
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#blindbox" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg shadow-purple-500/30 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-box-open"></i> XÉ TÚI MÙ MAY MẮN
+                </a>
+                <a href="#accounts" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-list"></i> Thuê Theo Mã Acc
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KHU VỰC TÚI MÙ (BLIND BOX) -->
+    <section id="blindbox" class="max-w-7xl mx-auto px-4 py-10">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-3 h-8 bg-purple-500 rounded-full"></div>
+            <div>
+                <h2 class="font-gaming text-2xl font-bold text-white flex items-center gap-2">
+                    TÚI MÙ MAY MẮN <span class="bg-purple-900/60 border border-purple-500/40 text-purple-300 text-xs px-2 py-0.5 rounded font-sans font-normal">Thuê 99 Năm Trúng Acc Siêu VIP</span>
+                </h2>
+                <p class="text-slate-400 text-xs">Mở ngẫu nhiên túi mù để sở hữu quyền thuê tài khoản VIP thời hạn 99 năm với chi phí siêu rẻ!</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Túi Mù Đồng -->
+            <div class="blindbox-card rounded-2xl p-6 text-center relative overflow-hidden">
+                <div class="absolute -top-6 -right-6 w-20 h-20 bg-amber-600/20 rounded-full blur-xl"></div>
+                <div class="text-amber-500 text-5xl mb-4">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+                <h3 class="font-gaming text-xl font-bold text-amber-300 mb-1">TÚI MÙ ĐỒNG</h3>
+                <p class="text-xs text-slate-400 mb-4">Cơ hội trúng Acc Rank Cao / Full Tướng (Thời hạn 99 Năm)</p>
+                <div class="text-2xl font-black text-white mb-4">20.000 đ <span class="text-xs text-slate-400 font-normal">/ lượt</span></div>
+                <button onclick="openBlindBox('Túi Mù Đồng', 20000)" class="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold py-2.5 rounded-xl transition-all shadow-md">
+                    <i class="fa-solid fa-scissors mr-1"></i> XÉ TÚI MÙ (20K)
+                </button>
+            </div>
+
+            <!-- Túi Mù Bạc -->
+            <div class="blindbox-card rounded-2xl p-6 text-center relative overflow-hidden border-cyan-500/80">
+                <span class="absolute top-3 right-3 bg-cyan-500 text-slate-950 font-bold text-[10px] px-2 py-0.5 rounded-full uppercase">HOT</span>
+                <div class="text-cyan-400 text-5xl mb-4">
+                    <i class="fa-solid fa-box-archive"></i>
+                </div>
+                <h3 class="font-gaming text-xl font-bold text-cyan-300 mb-1">TÚI MÙ BẠC</h3>
+                <p class="text-xs text-slate-400 mb-4">Cơ hội trúng Acc Skin VIP / Nhiều Trang Phục 99 Năm</p>
+                <div class="text-2xl font-black text-white mb-4">50.000 đ <span class="text-xs text-slate-400 font-normal">/ lượt</span></div>
+                <button onclick="openBlindBox('Túi Mù Bạc', 50000)" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-2.5 rounded-xl transition-all shadow-md">
+                    <i class="fa-solid fa-scissors mr-1"></i> XÉ TÚI MÙ (50K)
+                </button>
+            </div>
+
+            <!-- Túi Mù VIP -->
+            <div class="blindbox-card rounded-2xl p-6 text-center relative overflow-hidden border-pink-500">
+                <span class="absolute top-3 right-3 bg-pink-500 text-white font-bold text-[10px] px-2 py-0.5 rounded-full uppercase">SIÊU VIP</span>
+                <div class="text-pink-500 text-5xl mb-4">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <h3 class="font-gaming text-xl font-bold text-pink-300 mb-1">TÚI MÙ KIM CƯƠNG</h3>
+                <p class="text-xs text-slate-400 mb-4">100% Trúng Acc Siêu Phẩm / Đồ Độc Quyền (Thuê 99 Năm)</p>
+                <div class="text-2xl font-black text-white mb-4">100.000 đ <span class="text-xs text-slate-400 font-normal">/ lượt</span></div>
+                <button onclick="openBlindBox('Túi Mù Kim Cương', 100000)" class="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-2.5 rounded-xl transition-all shadow-md">
+                    <i class="fa-solid fa-scissors mr-1"></i> XÉ TÚI MÙ (100K)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DANH SÁCH ACC CHO THUÊ 99 NĂM -->
+    <section id="accounts" class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-3 h-8 bg-cyan-500 rounded-full"></div>
+            <h2 class="font-gaming text-2xl font-bold text-white">DANH SÁCH ACC CHO THUÊ 99 NĂM</h2>
+        </div>
+
+        <!-- BỘ LỌC ACC -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 mb-6 flex flex-wrap gap-3">
+            <button onclick="filterGame('all')" class="bg-cyan-500 text-slate-950 font-bold text-xs px-4 py-2 rounded-lg">Tất Cả Game</button>
+            <button onclick="filterGame('ff')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs px-4 py-2 rounded-lg border border-slate-700">Free Fire</button>
+            <button onclick="filterGame('roblox')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs px-4 py-2 rounded-lg border border-slate-700">Roblox</button>
+            <button onclick="filterGame('lq')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs px-4 py-2 rounded-lg border border-slate-700">Liên Quân</button>
+        </div>
+
+        <!-- DANH SÁCH SẢN PHẨM -->
+        <div id="accountList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Acc 1 -->
+            <div class="acc-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all">
+                <img src="[https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60](https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60)" class="w-full h-44 object-cover">
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-red-500/20 text-red-400 border border-red-500/30 text-[10px] font-bold px-2 py-0.5 rounded">FREE FIRE</span>
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> Thời Hạn: <strong>99 Năm</strong></span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">Mã Acc #FF9901 - AK Rồng Xanh Max Lv</h3>
+                    <ul class="text-xs text-slate-400 space-y-1 mb-4">
+                        <li>• Đăng nhập: Facebook / Garena</li>
+                        <li>• Nổi bật: AK Rồng Xanh Max, MP40 Mãng Xà</li>
+                        <li>• Hợp đồng thuê: Tự động gia hạn 99 năm</li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                        <div>
+                            <span class="text-[10px] text-slate-400 block">Giá thuê 99 năm</span>
+                            <span class="text-lg font-black text-cyan-400">150.000 đ</span>
+                        </div>
+                        <button onclick="rentAccount('FF9901', 150000)" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs px-4 py-2.5 rounded-xl transition-all">
+                            THUÊ NGAY 99 NĂM
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Acc 2 -->
+            <div class="acc-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all">
+                <img src="[https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=60](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=60)" class="w-full h-44 object-cover">
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-purple-500/20 text-purple-400 border border-purple-500/30 text-[10px] font-bold px-2 py-0.5 rounded">ROBLOX</span>
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> Thời Hạn: <strong>99 Năm</strong></span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">Mã Acc #RB9902 - Blox Fruit Meleo / V4 Max</h3>
+                    <ul class="text-xs text-slate-400 space-y-1 mb-4">
+                        <li>• Gamepass: Full Gamepass Blox Fruit</li>
+                        <li>• Trái Ác Quỷ: Vĩnh viễn Mocha/Dragon</li>
+                        <li>• Hợp đồng thuê: Tự động gia hạn 99 năm</li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                        <div>
+                            <span class="text-[10px] text-slate-400 block">Giá thuê 99 năm</span>
+                            <span class="text-lg font-black text-cyan-400">200.000 đ</span>
+                        </div>
+                        <button onclick="rentAccount('RB9902', 200000)" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs px-4 py-2.5 rounded-xl transition-all">
+                            THUÊ NGAY 99 NĂM
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL NẠP TIỀN DEMO -->
+    <div id="depositModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 relative">
+            <button onclick="closeModal('depositModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h3 class="font-gaming text-lg font-bold text-white mb-4"><i class="fa-solid fa-qrcode text-cyan-400 mr-2"></i>NẠP TIỀN VÀO VÍ DEMO</h3>
+            
+            <p class="text-xs text-slate-400 mb-4">Chọn số tiền em muốn cộng thử vào ví để test tính năng thuê acc:</p>
+            
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <button onclick="addBalance(50000)" class="bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-2 rounded-xl text-sm border border-slate-700">+ 50.000 đ</button>
+                <button onclick="addBalance(100000)" class="bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-2 rounded-xl text-sm border border-slate-700">+ 100.000 đ</button>
+                <button onclick="addBalance(200000)" class="bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-2 rounded-xl text-sm border border-slate-700">+ 200.000 đ</button>
+                <button onclick="addBalance(500000)" class="bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-2 rounded-xl text-sm border border-slate-700">+ 500.000 đ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT XỬ LÝ -->
+    <script>
+        let balance = 0;
+
+        function updateBalanceDisplay() {
+            document.getElementById('userBalance').innerText = balance.toLocaleString('vi-VN') + ' đ';
+        }
+
+        function addBalance(amount) {
+            balance += amount;
+            updateBalanceDisplay();
+            alert('Đã cộng thử ' + amount.toLocaleString('vi-VN') + ' đ vào ví demo!');
+            closeModal('depositModal');
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function openBlindBox(type, price) {
+            if (balance < price) {
+                alert('Số dư không đủ! Hãy bấm Nạp Tiền để có tiền trong ví demo.');
+                openModal('depositModal');
+                return;
+            }
+            balance -= price;
+            updateBalanceDisplay();
+            alert('🎉 CHÚC MỪNG!\nBạn đã xé thành công ' + type + ' (Thời hạn thuê 99 năm).\n\nThông tin tài khoản thuê:\nTài khoản: thue99nam_' + Math.floor(Math.random() * 89999 + 10000) + '\nMật khẩu: ThueAcc99NamVIP');
+        }
+
+        function rentAccount(code, price) {
+            if (balance < price) {
+                alert('Số dư không đủ! Hãy bấm Nạp Tiền để cộng tiền thử nghiệm.');
+                openModal('depositModal');
+                return;
+            }
+            balance -= price;
+            updateBalanceDisplay();
+            alert('✅ THUÊ THÀNH CÔNG MÃ ACC #' + code + '!\nThời hạn hợp đồng: 99 NĂM (36.135 Ngày)\n\nTài khoản: acc_thue_' + code + '\nMật khẩu: Thue99NamPass123');
+        }
+    </script>
+</body>
+</html>
